@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trustpilot Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .review-container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .rating-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        .rating-header .stars {
+            color: #00b67a;
+            font-size: 1.5em;
+        }
+        .rating-header span {
+            font-size: 18px;
+            color: #333;
+        }
+        .reviews {
+            display: flex;
+            justify-content: space-around;
+        }
+        .review {
+            width: 30%;
+            text-align: left;
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        .review .stars {
+            color: #00b67a;
+            font-size: 1.2em;
+        }
+        .review .title {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .review .verified {
+            color: #007f4f;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        .review .text {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .navigation {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .navigation button {
+            background-color: #00b67a;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="review-container">
+        <div class="rating-header">
+            <span class="stars">★★★★★</span>
+            <span>Excellent</span>
+            <span>Based on 250 reviews</span>
+        </div>
+        <div class="reviews">
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <div class="title">THIS WAS AWESOME!</div>
+                <div class="verified">Verified</div>
+                <div class="text">Never had a better experience than with this awesome company.</div>
+                <div class="timestamp">Steve, 2 minutes ago</div>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★☆</div>
+                <div class="title">Really liked their TrustBox</div>
+                <div class="verified">Verified</div>
+                <div class="text">The TrustBox was so nice, but it's a shame it's only a demo :(</div>
+                <div class="timestamp">Thomas, 3 hours ago</div>
+            </div>
+            <div class="review">
+                <div class="stars">★★★☆☆</div>
+                <div class="title">If only they had a real TrustBox</div>
+                <div class="verified">Verified</div>
+                <div class="text">How do I know I can trust this company when they don't use a real TrustBox?</div>
+                <div class="timestamp">Wendy, 4 days ago</div>
+            </div>
+        </div>
+        <div class="navigation">
+            <button onclick="prevReview()">❮</button>
+            <button onclick="nextReview()">❯</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions to handle navigation (just placeholders)
+        function prevReview() {
+            alert('Previous review');
+        }
+        function nextReview() {
+            alert('Next review');
+        }
+    </script>
+</body>
+</html>
