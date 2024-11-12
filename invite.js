@@ -1,12 +1,13 @@
 window.onload = function () {
     console.log("Hello, World!");
 
-    fetch('https://api.example.com/data')
+    fetch('http://ratingfacts.test/api/get-badge')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json(); // Parse the JSON data from the response
+            //prinrt response to console
+            console.log(response);
         })
         .then(data => {
             console.log(data); // Handle the data from the response
