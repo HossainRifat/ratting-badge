@@ -21,6 +21,20 @@ window.onload = function () {
                 next = document.getElementById("next"),
                 prev = document.getElementById("prev");
 
+            //auto slide 
+            let scrollAmount = 0;
+            const slideTimer = setInterval(function () {
+                if (scrollAmount < content.scrollWidth - carousel.offsetWidth) {
+                    scrollAmount += 408;
+                    carousel.scroll(scrollAmount, 0);
+                } else {
+                    scrollAmount = 0;
+                    carousel.scroll(scrollAmount, 0);
+                }
+            }, 2000);
+
+
+
             next.addEventListener("click", e => {
                 carousel.scrollBy(width + gap, 0);
                 if (carousel.scrollWidth !== 0) {
@@ -58,6 +72,7 @@ window.onload = function () {
             // Apply the responsive styles on load and resize
             window.addEventListener("load", applyResponsiveStyles);
             window.addEventListener("resize", applyResponsiveStyles);
+            applyResponsiveStyles();
         })
         .catch(error => {
             console.error('Ratingfacts - There was a problem with the fetch operation:', error);
