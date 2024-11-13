@@ -3,7 +3,7 @@ window.onload = function () {
     const inviteToken = div.getAttribute("data-invite-token");
     console.log(inviteToken);
 
-    fetch('http://ratingfacts.test/api/get-badge/' + inviteToken)
+    fetch('https://app.ratingfacts.com/api/get-badge/' + inviteToken)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Ratingfacts - Network response was not ok');
