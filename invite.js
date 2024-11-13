@@ -1,18 +1,20 @@
 window.onload = function () {
-    console.log("Hello, World!");
+    const div = document.getElementById("ratingfacts-badge");
+    const inviteToken = div.getAttribute("data-invite-token");
+    console.log(inviteToken);
 
-    fetch('http://ratingfacts.test/api/get-badge')
+    fetch('http://ratingfacts.test/api/get-badge/' + inviteToken)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Ratingfacts - Network response was not ok');
             }
-            //prinrt response to console
-            console.log(response);
+            return response.json();
+
         })
         .then(data => {
-            console.log(data); // Handle the data from the response
+            div.innerHTML = data.data;
         })
         .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
+            console.error('Ratingfacts - There was a problem with the fetch operation:', error);
         });
 };
